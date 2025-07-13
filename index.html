@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Demo - Assignment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Form Elements Demo</h1>
+        <p>This form demonstrates various HTML form elements as required by the assignment.</p>
+        
+        <form action="process_form.php" method="POST" enctype="multipart/form-data">
+            
+            <!-- Text Input -->
+            <div class="form-group">
+                <label for="username">Text Input - Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+            </div>
+            
+            <!-- Textarea -->
+            <div class="form-group">
+                <label for="comments">Textarea - Comments:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Enter your comments here..."></textarea>
+            </div>
+            
+            <!-- Hidden Data -->
+            <input type="hidden" name="form_id" value="demo_form_2024">
+            <input type="hidden" name="submitted_at" value="<?php echo date('Y-m-d H:i:s'); ?>">
+            
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password Input:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password">
+            </div>
+            
+            <!-- Array of Check Boxes -->
+            <div class="form-group">
+                <label>Array of Check Boxes - Select your hobbies:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="hobbies[]" value="reading"> Reading</label>
+                    <label><input type="checkbox" name="hobbies[]" value="gaming"> Gaming</label>
+                    <label><input type="checkbox" name="hobbies[]" value="sports"> Sports</label>
+                    <label><input type="checkbox" name="hobbies[]" value="music"> Music</label>
+                    <label><input type="checkbox" name="hobbies[]" value="cooking"> Cooking</label>
+                </div>
+            </div>
+            
+            <!-- Radio Buttons -->
+            <div class="form-group">
+                <label>Radio Buttons - Select your gender:</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                    <label><input type="radio" name="gender" value="other"> Other</label>
+                    <label><input type="radio" name="gender" value="prefer_not_to_say"> Prefer not to say</label>
+                </div>
+            </div>
+            
+            <!-- Selection List -->
+            <div class="form-group">
+                <label for="country">Selection List - Select your country:</label>
+                <select id="country" name="country">
+                    <option value="">-- Please choose a country --</option>
+                    <option value="usa">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="australia">Australia</option>
+                    <option value="germany">Germany</option>
+                    <option value="france">France</option>
+                    <option value="japan">Japan</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <!-- File Input -->
+            <div class="form-group">
+                <label for="profile_picture">File Input - Upload profile picture:</label>
+                <input type="file" id="profile_picture" name="profile_picture" accept="image/*">
+            </div>
+            
+            <!-- URL Input -->
+            <div class="form-group">
+                <label for="website">URL Input - Your website:</label>
+                <input type="url" id="website" name="website" placeholder="https://example.com">
+            </div>
+            
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">Submit Form</button>
+                <button type="reset">Reset Form</button>
+            </div>
+            
+        </form>
+        
+        <div class="note">
+            <p><strong>Note:</strong> This form includes all required elements: text, textarea, hidden data, password, array of checkboxes, radio buttons, selection list, file input, and URL input. Each element is properly labeled as requested.</p>
+        </div>
+    </div>
+</body>
+</html>
